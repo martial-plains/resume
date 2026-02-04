@@ -1,12 +1,11 @@
-name: Build PDFs from Org files
+name: Build and Publish PDFs
 
 on:
-  push:
-    branches: [main]
-  pull_request:
+  release:
+    types: [created]  # Trigger when a new release is created
 
 jobs:
-  build-pdfs:
+  build-and-publish:
     runs-on: ubuntu-latest
 
     steps:
@@ -16,20 +15,31 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y emacs texlive-xetex texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra latexmk fonts-dejavu fonts-liberation
+          sudo apt-get install -y emacs texlive-xetex texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra latexmk fonts-dejavu fonts-liberation zip
 
       - name: Convert Org to PDF
         run: |
+          mkdir -p pdfs
           for orgfile in *.org; do
             echo "Processing $orgfile ..."
             emacs --batch "$orgfile" -f org-latex-export-to-latex
             texfile="${orgfile%.org}.tex"
             latexmk -xelatex -interaction=nonstopmode -halt-on-error "$texfile"
+            mv "${orgfile%.org}.pdf" pdfs/
           done
 
-      - name: Upload PDFs
-        uses: actions/upload-artifact@v4
+      - name: Zip PDFs
+        run: |
+          cd pdfs
+          zip -r ../pdf-artifacts.zip ./*
+          cd ..
+
+      - name: Upload PDFs to Release
+        uses: actions/upload-release-asset@v1
         with:
-          name: pdf-artifacts
-          path: "*.pdf"
-          if-no-files-found: error
+          upload_url: ${{ github.event.release.upload_url }}
+          asset_path: ./pdf-artifacts.zip
+          asset_name: pdf-artifacts.zip
+          asset_content_type: application/zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
