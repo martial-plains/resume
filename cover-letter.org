@@ -1,0 +1,57 @@
+#+options: toc:nil num:nil title:nil
+#+latex_class: article
+#+latex_class_options: [11pt, letterpaper]
+#+latex_compiler: xelatex
+
+#+latex_header: \usepackage[top=0.4in, bottom=0.4in, left=0.6in, right=0.6in]{geometry}
+#+latex_header: \usepackage{fontspec}
+#+latex_header: \usepackage{xcolor}
+
+#+latex_header: \hypersetup{pdfborder={0 0 0}, colorlinks=false}
+
+#+latex_header: \setmainfont{AvenirNext}[Path=fonts/Avenir Next/, UprightFont = *-Regular, BoldFont=*-Bold, ItalicFont=*-Italic]
+#+latex_header: \newfontfamily\didotfont{GFSDidot}[Path=fonts/GFS_Didot/, UprightFont = *-Regular]
+#+latex_header: \pagenumbering{gobble}
+
+#+begin_export latex
+\begin{center}
+    \vspace*{0.2cm}
+    {\didotfont \fontsize{26pt}{30pt}\selectfont \addfontfeatures{LetterSpace=8} ALLISTER ISAIAH HARVEY} 
+    
+    \vspace{0.1cm}
+    
+    {\fontsize{9pt}{11pt}\selectfont \addfontfeatures{LetterSpace=12} STRATEGIC OPERATIONS \& DESIGN}
+    
+    \vspace{0.1cm}
+    {\color[HTML]{999999}\rule{\textwidth}{0.3pt}} 
+    \vspace{0.1cm}
+    
+    {\fontsize{8pt}{10pt}\selectfont 
+    \href{mailto:a.i.harvey@icloud.com}{a.i.harvey@icloud.com} \quad \textperiodcentered \quad 
+    +1.868.277.8900 \quad \textperiodcentered \quad
+    \href{https://isaiah-harvey.com}{isaiah-harvey.com} \quad \textperiodcentered \quad
+    \href{https://linkedin.com/in/isaiah-harvey}{linkedin.com/in/isaiah-harvey} \quad \textperiodcentered \quad 
+    Claxton Bay, TT}
+\end{center}
+\vspace{0.3cm}
+#+end_export
+
+* [Date]
+
+* [Hiring Manager Name]
+[Company Name]
+[Company Address]
+
+* Re: [Position Name] Application
+
+Dear [Hiring Manager Name],
+
+I am writing to express my interest in the [Position Name] role at [Company Name]. With a background spanning **Strategic Operations** and **Software Development** in **Rust** and **TypeScript**, I have built a career around creating high-performance, automated solutions for complex environments.
+
+At my previous role with Tabernacle Construction, I architected custom Rust applications that streamlined operational workflows and reduced human error in critical healthcare and finance systems. I am particularly drawn to [Company Name] because of your focus on [mention a specific company project or value], and I am confident that my ability to bridge the gap between technical architecture and operational efficiency would be an asset to your team.
+
+Thank you for your time and consideration. I look forward to the possibility of discussing how my skills in systems automation and strategic design can contribute to the continued success of [Company Name].
+
+Sincerely,
+
+Allister Isaiah Harvey

@@ -1,0 +1,35 @@
+name: Build PDFs from Org files
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build-pdfs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y emacs texlive-xetex texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra latexmk fonts-dejavu fonts-liberation
+
+      - name: Convert Org to PDF
+        run: |
+          for orgfile in *.org; do
+            echo "Processing $orgfile ..."
+            emacs --batch "$orgfile" -f org-latex-export-to-latex
+            texfile="${orgfile%.org}.tex"
+            latexmk -xelatex -interaction=nonstopmode -halt-on-error "$texfile"
+          done
+
+      - name: Upload PDFs
+        uses: actions/upload-artifact@v4
+        with:
+          name: pdf-artifacts
+          path: "*.pdf"
+          if-no-files-found: error

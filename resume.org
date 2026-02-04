@@ -1,0 +1,91 @@
+#+options: toc:nil num:nil title:nil
+#+latex_class: article
+#+latex_class_options: [11pt, letterpaper]
+#+latex_compiler: xelatex
+
+#+latex_header: \usepackage[top=0.4in,bottom=0.4in,left=0.6in,right=0.6in]{geometry}
+#+latex_header: \usepackage[none]{hyphenat}
+#+latex_header: \usepackage{fontspec}
+#+latex_header: \usepackage{xcolor}
+#+latex_header: \usepackage{titlesec}
+#+latex_header: \usepackage{enumitem}
+
+#+latex_header: \hypersetup{pdfborder={0 0 0}, colorlinks=false}
+#+latex_header: \sloppy
+
+#+latex_header: \setmainfont{AvenirNext}[Path=fonts/Avenir Next/, UprightFont = *-Regular, BoldFont=*-Bold, ItalicFont=*-Italic]
+#+latex_header: \newfontfamily\didotfont{GFSDidot}[Path=fonts/GFS_Didot/, UprightFont = *-Regular]
+#+latex_header: \pagenumbering{gobble}
+
+#+latex_header: \titleformat{\section}{\didotfont\fontsize{12pt}{14pt}\selectfont\addfontfeatures{LetterSpace=15}\uppercase}{}{0em}{}[{\color[HTML]{999999}\rule{\textwidth}{0.3pt}}]
+#+latex_header: \titlespacing*{\section}{0pt}{0.8em}{0.3em}
+
+#+latex_header: \titleformat{\subsection}{\fontsize{10.5pt}{12pt}\bfseries\selectfont}{}{0em}{}
+#+latex_header: \titlespacing*{\subsection}{0pt}{0.5em}{0.2em}
+
+#+latex_header: \setlist[itemize]{leftmargin=1.0em, nosep, label=\textperiodcentered, topsep=0pt}
+#+latex_header: \setlength{\parindent}{0pt}
+
+#+begin_export latex
+\begin{center}
+    \vspace*{0.2cm}
+    {\didotfont \fontsize{26pt}{30pt}\selectfont \addfontfeatures{LetterSpace=8} ALLISTER ISAIAH HARVEY} 
+    
+    \vspace{0.1cm}
+    
+    {\fontsize{9pt}{11pt}\selectfont \addfontfeatures{LetterSpace=12} STRATEGIC OPERATIONS \& DESIGN}
+    
+    \vspace{0.1cm}
+    {\color[HTML]{999999}\rule{\textwidth}{0.3pt}} 
+    \vspace{0.1cm}
+    
+    {\fontsize{8pt}{10pt}\selectfont 
+    \href{mailto:a.i.harvey@icloud.com}{a.i.harvey@icloud.com} \quad \textperiodcentered \quad 
+    +1.868.277.8900 \quad \textperiodcentered \quad 
+    \href{http://isaiah-harvey.com}{isaiah-harvey.com} \quad \textperiodcentered \quad 
+    \href{https://linkedin.com/in/isaiah-harvey}{linkedin.com/in/isaiah-harvey} \quad \textperiodcentered \quad 
+    Claxton Bay, TT}
+\end{center}
+\vspace{0.3cm}
+#+end_export
+
+* PROFESSIONAL EXPERIENCE
+
+** CONTRACT SOFTWARE DEVELOPER \hfill \color[HTML]{666666}\small 2015–2017
+/Tabernacle Construction/
+- Architected and deployed custom Rust-based applications tailored for high-reliability requirements in finance and healthcare environments.
+- Streamlined operational workflows by automating manual data entry and processing tasks.
+- Ensured system integrity by leveraging Rust’s memory safety features to build robust, crash-resistant software.
+
+** ASSISTANT TO REALTOR \hfill \color[HTML]{666666}\small 2017–2018
+/Coldwell Banker/
+- Optimized client relationship management by implementing systematic tracking and digital organization for property listings.
+- Facilitated high-stakes property showings, acting as a primary point of contact for luxury real estate transactions.
+
+** FREELANCE SOFTWARE DEVELOPER \hfill \color[HTML]{666666}\small 2018–PRESENT
+- Engineered scalable full-stack solutions using Rust and TypeScript, delivering bespoke tools for diverse client needs.
+- Contributed to the Open Source ecosystem via GitHub, focusing on performance enhancements within the Rust community.
+- Reduced client operational costs by identifying and automating repetitive infrastructure tasks through custom scripting.
+
+#+begin_export latex
+\vspace{0.5em}
+\noindent
+\begin{minipage}[t]{0.38\textwidth}
+    \vspace{0pt}
+    \section*{EDUCATION}
+    \noindent
+    {\fontsize{9pt}{11pt}\selectfont \textbf{Secondary Education} \\
+    7 CSEC O’ Level Subjects including Mathematics, English, Economics, and Principles of Accounts.}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.56\textwidth}
+    \vspace{0pt}
+    \section*{SKILLS}
+    \noindent
+    {\fontsize{9pt}{11pt}\selectfont 
+    \textbf{Languages:} Rust, TypeScript, JavaScript, SQL \\
+    \textbf{Technical:} Full-Stack, Automation, Data Structures \\
+    \textbf{Tools:} Git, GitHub, Linux, CI/CD \\
+    \textbf{Soft Skills:} Design, Problem-Solving, Mentorship}
+\end{minipage}
+#+end_export
