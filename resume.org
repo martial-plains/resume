@@ -40,7 +40,7 @@
 
         \vspace{0.1cm}
         {\fontsize{9pt}{11pt}\selectfont \addfontfeatures{LetterSpace=12}
-        RUST SOFTWARE ENGINEER \textperiodcentered{} SYSTEMS AND AUTOMATION}
+        SOFTWARE DEVELOPER \textperiodcentered{} SYSTEMS AND AUTOMATION}
 
         \vspace{0.2cm}
         {\fontsize{8pt}{10pt}\selectfont
@@ -94,7 +94,7 @@
 \begin{minipage}[t]{0.38\textwidth}
     \vspace{0pt}
     \section*{EDUCATION}
-    {\fontsize{9pt}{11pt}\selectfont 
+    {\fontsize{9pt}{11pt}\selectfont
     \textbf{Secondary Education} \\
     7 CSEC O’ Level Subjects including Mathematics, English, Economics, and Principles of Accounts.
 
